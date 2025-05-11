@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ma. Dannielle Louiesse Valdez">
+  <title>Cinnamoroll Fan Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #d2ecff, #bae6fd, #e0f7ff);
+      text-align: center;
+    }
+
+    header {
+      background-color: #FFFFFF;
+      padding: 20px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    header h1 {
+      color: #91C9F7;
+      margin: 0;
+      font-size: 50px;
+    }
+
+    
+    /* Main nav styles */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .nav-item {
+      position: relative;
+      margin: 5px;
+    }
+
+    .nav-links a,
+    .nav-links button {
+      background-color: #B3E5FC;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s ease;
+      color: #375E97;
+      text-decoration: none;
+    }
+
+    .nav-links button:hover,
+    .nav-links a:hover {
+      background-color: #A0D8EF;
+    }
+
+    /* Dropdown menus */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ffffff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      padding: 10px 0;
+      z-index: 10;
+    }
+
+    .dropdown a {
+  display: block;
+  padding: 10px 25px;
+  margin: 4px 10px;
+  color: #375E97;
+  text-align: left;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.dropdown a:hover {
+  background-color: #E3F4FC;
+}
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+
+    /* Burger menu */
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+    }
+
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: #91C9F7;
+      margin: 4px;
+      border-radius: 5px;
+    }
+
+    .nav-links.mobile {
+      display: none;
+      flex-direction: column;
+      background-color: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .nav-links.mobile.show {
+      display: flex;
+    }
+
+    .nav-links.mobile .dropdown {
+      position: static;
+      display: none;
+      box-shadow: none;
+      padding-left: 10px;
+    }
+
+    .nav-links.mobile .nav-item.active .dropdown {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links.desktop {
+        display: none;
+      }
+
+      .burger {
+        display: flex;
+      }
+    }
+
+    .hero-img {
+      width: 50%;
+      margin-top: 20px;
+      height: auto;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #5B5B5B;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; 
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .grid-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .img1 { grid-column: 1; grid-row: 1; }
+    .img2 { grid-column: 1; grid-row: 2; }
+    .img3 { grid-column: 2; grid-row: 1; }
+    .img4 { grid-column: 2; grid-row: 2; }
+
+    ul {
+      text-align: left;
+      list-style-position: inside;
+      padding-right: 20px;
+      font-family: Arial, sans-serif;
+      font-size: large;
+    }
+
+    li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .title {
+      color: #44aaf9; 
+      font-weight: bold;
+    }
+
+
+    footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #aee2f9; /* soft sky blue, like Cinnamoroll's theme */
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 4px solid #ffffff;
+    font-family: 'Arial', sans-serif;
+  }
+  </style>
+</head>
+<body id="top">
+
+    <header>
+      <h1>Cinnamoroll World <img src="images/Cinnamoroll-removebg-preview.png" style="height: 10em; vertical-align: text-bottom; width: 70px; height: 60px;"></h1>
+      
+  
+      <!-- Burger Icon -->
+      <div class="burger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+  
+      <!-- Desktop Navigation -->
+      <nav class="nav-links desktop">
+        <div class="nav-item"><a href="Website/cinnamorollwebsite.html#top"><button>Home <img src="images/house.png" width="13" height="13" alt="Icon Description"></button></a></div>
+  
+        <div class="nav-item">
+          <button>Pictures <img src="images/cinnamon-roll.png" width="13" height="13" alt="Icon Description"></button>
+          <div class="dropdown">
+            <a href="picturesstation.html#cinnamoroll">Cinnamoroll</a>
+            <a href="picturesstation.html#milku">Cinnamoroll with Milku</a>
+            <a href="picturesstation.html#friends">Cinnamoroll with Friends</a>
+          </div>
+        </div>
+  
+        <div class="nav-item">
+          <button>Shop <img src="images/store.png" width="13" height="13" alt="Icon Description"></button>
+          <div class="dropdown">
+            <a href="Shop.html">Photocards</a>
+                <a href="Shop2.html">Keychain</a>
+                <a href="Shop3.html">Bags</a>
+          </div>
+        </div>
+  
+        <div class="nav-item"><a href="contact.html"><button>Contact <img src="images/support.png" width="13" height="13" alt="Icon Description"></button></a></div>
+      </nav>
+  
+      <!-- Mobile Dropdown Navigation -->
+      <nav class="nav-links mobile" id="mobileMenu">
+        <div class="nav-item"><a href="home.html"><button>Home</button></a></div>
+  
+        <div class="nav-item" onclick="toggleDropdown(this)">
+          <button>Pictures</button>
+          <div class="dropdown">
+            <a href="picturesstation.html#cinnamoroll">Cinnamoroll</a>
+            <a href="picturesstation.html#milku">Cinnamoroll with Milku</a>
+            <a href="picturesstation.html#friends">Cinnamoroll with Friends</a>
+          </div>
+        </div>
+  
+        <div class="nav-item" onclick="toggleDropdown(this)">
+          <button>Shop</button>
+          <div class="dropdown">
+            <a href="Shop.html">Photocards</a>
+                  <a href="Shop2.html">Keychain</a>
+                  <a href="Shop3.html">Bags</a>
+          </div>
+        </div>
+  
+        <div class="nav-item"><a href="contact.html"><button>Contact</button></a></div>
+      </nav>
+    </header>
+    <img src="images/Cinnamoroll-2-removebg-preview copy.png" alt="Cinnamoroll" class="hero-img">
+    <div class="grid-container">
+      <img src="images/Cinnamoroll-2-removebg-preview copy.png" alt="Cinnamoroll" class="hero-img">
+      <img src="images/Cinnamoroll-2-removebg-preview.png" alt="Cinnamoroll" class="hero-img">
+      <img src="images/Cinnamoroll-2-removebg-preview.png" alt="Cinnamoroll" class="hero-img">
+      <img src="images/Cinnamoroll-2-removebg-preview copy.png" alt="Cinnamoroll" class="hero-img">
+    </div>
+
+    <h2 style="font-size: 40px; color: #66B2FF;">✨ Meet Cinnamoroll, the cutest puppy from the Sanrio family! ✨</h2>
+    
+
+      <p style="margin-bottom: 50px; margin-top: 50px;">Cinnamoroll is one of the most well-liked characters from Sanrio, the same company that produces Hello Kitty. It is a very adorable puppy with 
+        long ears that can make him fly, blue eyes, pink cheeks, and a curly tail that resembles the shape of a cinnamon roll.</p>
+        
+        <ul style="margin-bottom: 100px;">
+            <li><span class="title">Debut:</span> 2001. Designed by Sanrio designer Miyuki Okumura.</li>
+            <li><span class="title">Japanese Name:</span> シナモロール (Shinamorōru)</li>
+            <li><span class="title">Birthday:</span> March 6</li>
+            <li><span class="title">Gender:</span> Male</li>
+            <li><span class="title">Species:</span> Puppy, although he is often confused for a rabbit due to the shape of his ears.</li>
+            <li><span class="title">Character Description:</span> He is shy, friendly, and always kind to everyone.</li>
+            <li><span class="title">Works at:</span> Cafe Cinnamon, where he was found by the owner floating down from the sky.</li>
+            <li><span class="title">Friends:</span> He has a group of friends known as the Cinnamoangels (like Mocha, Chiffon, Milk, Espresso, and Cappuccino).</li>
+            <li><span class="title">Popularity:</span> Particularly popular within Japan, Cinnamoroll continues to rank quite highly in Sanrio character popularity contests.</li>
+            <li><span class="title">Origin Story:</span> One day, the owner of a café saw a white puppy floating from heaven like a fluffy cloud. 
+              He descended to the mouth-watering scent of freshly baked cinnamon rolls, and the owner decided to name him Cinnamoroll. 
+              He now helps out at Café Cinnamon, where he is often found taking naps on customers' laps.</li>
+          </ul>
+          
+          <div class="grid-container">
+            <img src="images/breadcinna.png" alt="Cinnamoroll" class="hero-img">
+            <img src="images/_-3-removebg-preview.png" alt="Cinnamoroll" class="hero-img">
+          </div>
+
+          
+          <ul>
+            <p style="font-size: 30px; color: #44aaf9;">Appearance <img src="images/bark.png" width="15" height="15" alt="Icon Description"></p>
+            <li>Shy and quiet but very sweet and loyal</li>
+            <li>Loves to nap, eat, and hang out with his friends</li>
+            <li>Often takes care of his younger friend Milk</li>
+          </ul>
+
+          
+          <ul>
+            <p style="font-size: 30px; color: #44aaf9;">Personality <img src="images/depression.png" width="15" height="15" alt="Icon Description"></p>
+            <li>Shy and quiet but very sweet and loyal</li>
+            <li>Loves to nap, eat, and hang out with his friends</li>
+            <li>Often takes care of his younger friend Milk</li>
+          </ul>
+
+          
+          <ul>
+            <p style="font-size: 30px; color: #44aaf9;">Fun Facts <img src="images/fun-fact.png" width="15" height="15" alt="Icon Description"></p>
+            <li>His flying ears are one of his most magical and iconic traits.</li>
+            <li>He loves hot milk and cinnamon rolls.</li>
+            <li>He’s extremely beloved by both kids and adult collectors.</li>
+          </ul>
+
+
+          <h2 style="margin-top: 100px; font-size: 60px; color: #66B2FF;">✨ Café Cinnamon Crew (Friends)! ✨</h2>
+          <img src="images/Cinnamoroll-4-removebg-preview.png" style="margin-bottom: 50px; alt="Cinnamoroll" class="hero-img">
+
+          <ul>
+            <p style="margin-bottom: 50px; margin-top: 50px; font-size: 25px; ">Cinnamoroll is part of a group of dog characters who also hang out at the café</p>
+            
+            <li><span class="title">Milk (Japanese: ミルク (Miruku)):</span>  A baby boy puppy who adores Cinnamoroll and follows him everywhere. He drinks from a milk bottle and wears a blue pacifier.</li>
+            <li><span class="title">Mocha (Japanese: モカ (Moka)):</span> A stylish and confident girl puppy. She's the "big sister" type and leader of the Cinnamoangels, a trio of girl characters. Loves fashion and gossip.</li>
+            <li><span class="title">Chiffon (Japanese: シフォン (Shifon)):</span> A sporty and energetic girl puppy. She's athletic, competitive, and always full of energy. She’s part of the Cinnamoangels.</li>
+            <li><span class="title">Espresso (Japanese: エスプレッソ (Esupuresso)):</span> A refined and intelligent boy puppy. He wears glasses and comes from a wealthy family. Often a bit boastful but well-meaning.</li>
+            <li><span class="title">Cappuccino (Japanese: カプチーノ (Kapuchīno)):</span> A chubby and laid-back boy puppy who loves to eat and sleep. He’s very gentle and easygoing.</li>
+            <li><span class="title">Azuki (Japanese: あずき (Azuki)):</span> A newer addition to the CinnamoFriends. She's sweet and quiet with an admiration for traditional Japanese things.</li>
+            <li><span class="title">Corne (aka Cornet)(Japanese: コルネ (Korune)):</span> A lesser-known character who appears in some newer Cinnamoroll media. Very kind and slightly shy.</li>
+            <li><span class="title">Shirotaro (Japanese: シロ太郎, Shirotarō):</span> A charming Sanrio character from the Cinnamoroll universe. He is depicted as a small white cat who resides in the Shirokedo Bookstore on Wasambon Street. Shirotaro is often seen strolling through the garden of Café Cinnamon, making him a familiar presence among Cinnamoroll and his friends. <br>
+              
+            When Cinnamoroll first encountered him, he affectionately nicknamed him "Cotton." However, it was later revealed by Azuki that his actual name is Shirotaro. </li>
+
+          </ul>
+
+          <a href="#top" style="
+          font-size: 18px;
+          color: #0077cc;
+          text-decoration: none;
+          font-weight: bold;
+          padding: 10px;
+          display: inline-block;
+          margin-top: 100px;
+          margin-bottom: 50px;
+        ">Back to Top ↑</a>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('show');
+      }
+  
+      function toggleDropdown(item) {
+        item.classList.toggle('active');
+      }
+    </script>
+  
+  <footer style="text-align: center; padding: 20px; background-color: #f1f1f1; color: #333;">
+    © 2025 Cinnamoroll World. All rights reserved.
+  </footer>
+  </body>
+</html>
