@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ma. Dannielle Louiesse Valdez">
+    <title>Cinnamoroll Fan Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+          margin: 0;
+          font-family: 'Quicksand', sans-serif;
+          background: linear-gradient(to right, #d2ecff, #bae6fd, #e0f7ff);
+          color: #444;
+          text-align: center;
+          background-image: url('Cinnamoroll Wallpaper.png');
+  background-size: cover; 
+  background-repeat: no-repeat;   
+  background-position: center;
+        }
+    
+        header {
+          background-color: #FFFFFF;
+          padding: 20px 0;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+          position: relative;
+        }
+    
+        header h1 {
+          color: #91C9F7;
+          margin: 0;
+          font-size: 50px;
+        }
+        h1 {
+          color: #91C9F7;
+          margin: 0;
+          font-size: 50px;
+        }
+        
+        /* Main nav styles */
+        .nav-links {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 10px;
+        }
+    
+        .nav-item {
+          position: relative;
+          margin: 5px;
+        }
+    
+        .nav-links a,
+        .nav-links button {
+          background-color: #B3E5FC;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 25px;
+          font-size: 1em;
+          cursor: pointer;
+          transition: 0.3s ease;
+          color: #375E97;
+          text-decoration: none;
+        }
+    
+        .nav-links button:hover,
+        .nav-links a:hover {
+          background-color: #A0D8EF;
+        }
+
+    
+        /* Dropdown menus */
+        .dropdown {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #ffffff;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          border-radius: 10px;
+          padding: 10px 0;
+          z-index: 10;
+        }
+    
+        .dropdown a {
+      display: block;
+      padding: 10px 25px;
+      margin: 4px 10px;
+      color: #375E97;
+      text-align: left;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .dropdown a:hover {
+      background-color: #E3F4FC;
+    }
+    
+        .nav-item:hover .dropdown {
+          display: block;
+        }
+    
+        /* Burger menu */
+        .burger {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+          position: absolute;
+          top: 25px;
+          right: 20px;
+        }
+    
+        .burger div {
+          width: 25px;
+          height: 3px;
+          background-color: #91C9F7;
+          margin: 4px;
+          border-radius: 5px;
+        }
+    
+        .nav-links.mobile {
+          display: none;
+          flex-direction: column;
+          background-color: #ffffff;
+          padding: 10px 0;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+    
+        .nav-links.mobile.show {
+          display: flex;
+        }
+    
+        .nav-links.mobile .dropdown {
+          position: static;
+          display: none;
+          box-shadow: none;
+          padding-left: 10px;
+        }
+    
+        .nav-links.mobile .nav-item.active .dropdown {
+          display: flex;
+          flex-direction: column;
+        }
+    
+        /* Responsive */
+        @media (max-width: 768px) {
+          .nav-links.desktop {
+            display: none;
+          }
+    
+          .burger {
+            display: flex;
+          }
+        }
+    
+        .hero-img {
+          width: 50%;
+          margin-top: 20px;
+          height: auto;
+        }
+    
+    
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto; 
+          gap: 30px;
+          max-width: 900px;
+          margin: auto;
+          margin-top: 50px;
+        }
+    
+        .grid-container img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+    
+        .img1 { grid-column: 1; grid-row: 1; }
+        .img2 { grid-column: 2; grid-row: 1; }
+    
+
+
+  section {
+    margin-top: 50px;
+  }
+
+  h2 {
+    font-size: 60px;
+    color: #66B2FF;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #aee2f9; /* soft sky blue, like Cinnamoroll's theme */
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 4px solid #ffffff;
+    font-family: 'Arial', sans-serif;
+  }
+
+  a.anchor-link {
+    display: inline-block;
+    margin-top: 100px;
+    font-size: 20px;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .item-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+  button {
+            background-color: #91C9F7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px 0;
+
+        }
+        button:hover {
+            background-color: #66B2FF;
+        }
+
+
+        p {
+            color: #0077cc;
+            font-size: 30px;
+            margin-top: 100px;
+        }
+
+    .container {
+      max-width: 500px;
+      margin: 2rem auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 153, 255, 0.2);
+      margin-top: 100px;
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #006699;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #004a74;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #adddfc;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+      </style>
+    </head>
+    <body id="top">
+        
+        <header>
+          <h1>Cinnamoroll World <img src="images/Cinnamoroll-removebg-preview.png" style="height: 10em; vertical-align: text-bottom; width: 70px; height: 60px;"></h1>
+          
+      
+       
+          <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+      
+          <nav class="nav-links desktop">
+            <div class="nav-item"><a href="file:///Users/louiessevaldez/Documents/Website/cinnamorollwebsite.html#top"><button>Home <img src="/Users/louiessevaldez/Documents/Website/house.png" width="13" height="13" alt="Icon Description"></button></a></div>
+      
+            <div class="nav-item">
+              <button>Pictures <img src="images/cinnamon-roll.png" width="13" height="13" alt="Icon Description"></button>
+              <div class="dropdown">
+                <a href="picturesstation.html#cinnamoroll">Cinnamoroll</a>
+            <a href="picturesstation.html#milku">Cinnamoroll with Milku</a>
+            <a href="picturesstation.html#friends">Cinnamoroll with Friends</a>
+              </div>
+            </div>
+      
+            <div class="nav-item">
+              <button>Shop <img src="images/store.png" width="13" height="13" alt="Icon Description"></button>
+              <div class="dropdown">
+                <a href="Shop.html">Photocards</a>
+                <a href="Shop2.html">Keychain</a>
+                <a href="Shop3.html">Bags</a>
+              </div>
+            </div>
+      
+            <div class="nav-item"><a href="contact.html"><button>Contact <img src="images/support.png" width="13" height="13" alt="Icon Description"></button></a></div>
+          </nav>
+      
+          <!-- Mobile Dropdown Navigation -->
+          <nav class="nav-links mobile" id="mobileMenu">
+            <div class="nav-item"><a href="home.html"><button>Home</button></a></div>
+      
+            <div class="nav-item" onclick="toggleDropdown(this)">
+              <button>Pictures</button>
+              <div class="dropdown">
+                <a href="picturesstation.html#cinnamoroll">Cinnamoroll</a>
+            <a href="picturesstation.html#milku">Cinnamoroll with Milku</a>
+            <a href="picturesstation.html#friends">Cinnamoroll with Friends</a>
+              </div>
+            </div>
+      
+            <div class="nav-item" onclick="toggleDropdown(this)">
+              <button>Shop</button>
+              <div class="dropdown">
+                <a href="Shop.html">Photocards</a>
+                <a href="Shop2.html">Keychain</a>
+                <a href="Shop3.html">Bags</a>
+              </div>
+            </div>
+      
+            <div class="nav-item"><a href="contact.html"><button>Contact</button></a></div>
+          </nav>
+        </header>
+
+
+        
+          <div class="container">
+            <h1 style="font-size: 30px; color: #006699;">Contact Us <img src="images/_____ׅ__post_______-removebg-preview-2.png" style="height: 10em; vertical-align: text-bottom; width: 90px; height: 90px;"></h1>
+            <h2>We'd love to hear from you!</h2>
+            <form action="#" method="post">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required />
+        
+              <label for="email">Your Email:</label>
+              <input type="email" id="email" name="email" required />
+        
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+        
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        
+          
+    <hr style="border: none; height: 2px; background: #b2dffb; width: 80%; margin: 100px auto;">
+    
+          
+    <footer style="text-align: center; padding: 20px; background-color: #f1f1f1; color: #333;">
+        © 2025 Cinnamoroll World. All rights reserved.
+      </footer>
+  </body>
+</html>
